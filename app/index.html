@@ -21,13 +21,13 @@
     <!-- endbuild -->
   </head>
   <!--body ng-app="angularSampleAppApp" ng-controller="MainCtrl"-->
-  <body ng-controller="MainCtrl"  ng-app="angularSampleAppApp">
+  <body ng-app="angularSampleAppApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-include="'views/main.html'"></div>
+    <div class="container" ng-controller="MainCtrl"  ng-include="'views/main.html'"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
