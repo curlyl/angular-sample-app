@@ -1,8 +1,16 @@
-<div ui-view>
-	<div ui-sref="mainState" class="gridStyle" ng-grid="gridOptions"  >
+<!--div ui-view>
+	<div class="gridStyle" ng-grid="gridOptions"  >
 
 	</div>
 	<div >
 	    	<a href="#details">show details</a>
 	    </div>
+</div>-->
+
+
+<h1>Table</h1>
+<hr/>
+<div class="gridStyle" ng-grid="gridOptions"  >
 </div>
+<a ui-sref=".list">Show Details</a>
+<div ui-view></div>

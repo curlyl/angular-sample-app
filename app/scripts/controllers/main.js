@@ -24,23 +24,42 @@ var app = angular
       });
   }]);*/
 
+    app.config(function($stateProvider, $urlRouterProvider){
+      
+      // For any unmatched url, send to /route1
+      $urlRouterProvider.otherwise("/route1")
+      
+      $stateProvider
+        .state('route1', {
+            url: "/route1",
+            templateUrl: "../../views/main.html"
+        })
+          .state('route1.list', {
+              url: "/list",
+              templateUrl: "../../views/details.html",
+              controller: function($scope){
+                $scope.items = ["A", "List", "Of", "Items"];
+              }
+          })
+        .state('route2', {
+            url: "/route2",
+            templateUrl: "../../views/route2.html"
+        })
+    });
+/**
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/mainState");
+  $urlRouterProvider.otherwise("/");
   //
   // Now set up the states
   $stateProvider
-    .state('mainState', {
-      url: "/",
-      templateUrl: "../../views/main.html"
-    })
     .state('detailsState', {
       url: "/details",
       templateUrl: "../../views/details.html"
     })
     });
-
+*/
 app.controller('MainCtrl', function($scope) {
     $scope.myData = [{name: 'Moroni', age: 50},
                      {name: 'Tiancum', age: 43},
