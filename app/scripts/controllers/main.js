@@ -37,9 +37,9 @@ var app = angular
           .state('route1.list', {
               url: "/list",
               templateUrl: "../../views/details.html",
-              controller: function($scope){
+              controller: 'MainCtrl'/**function($scope){
                 $scope.items = ["A", "List", "Of", "Items"];
-              }
+              }**/
           })
         .state('route2', {
             url: "/route2",
@@ -60,17 +60,31 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     });
 */
-app.controller('MainCtrl', function($scope) {
-    $scope.myData = [{name: 'Moroni', age: 50},
+app.controller('MainCtrl', function($scope, $http) {
+    /**$scope.myData = [{name: 'Moroni', age: 50},
                      {name: 'Tiancum', age: 43},
                      {name: 'Jacob', age: 27},
                      {name: 'Nephi', age: 29},
-                     {name: 'Enos', age: 34}];
-    $scope.gridOptions = { data: 'myData' };
-   });
+                     {name: 'Enos', age: 34}];**/
+    $scope.selectedData = [];
+
+    $http.get('http://localhost:3000/user').success(function(userData) {
+        $scope.myData = userData;
+    });
+    $scope.gridOptions = { 
+        data: 'myData',
+        multiSelect: false,
+        selectedItems : $scope.selectedData,
+          afterSelectionChange: function(rowItem, event){
+              $http.get('http://localhost:3000/phone/' + $scope.selectedData[0].id).success(function(selectedPhoneData) {
+              $scope.items = selectedPhoneData;
+          });
+        }
+    };
 
 /**app.controller('DetailCtrl', function($scope) {
      
     $scope.message = 'This is Add new order screen';
      
 });*/
+});

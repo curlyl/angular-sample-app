@@ -24,6 +24,12 @@ If you are missing anything, and/or to read the commands to generate routes, mod
 ```sh
 $ git clone https://github.com/curlyl/angular-sample-app.git
 ```
+### Start the JSON server:
+This reads the db.json file. It will run at: http://localhost:3000/
+```sh
+$ json-server db.json --port 3000
+```
+
 ### Start the app:
 It will run at: http://127.0.0.1:9000/
 ```sh

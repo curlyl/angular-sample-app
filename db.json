@@ -1,0 +1,30 @@
+{
+  "user": [
+    { "id": 1, "username": "cleung", "firstName": "Curly", "lastName": "Leung" },
+    { "id": 2, "username": "lmartindelcampo", "firstName": "Lesley", "lastName": "Del Campo" },
+    { "id": 3, "username": "rkim", "firstName": "Ryan", "lastName": "Kim" },
+    { "id": 4, "username": "kprince", "firstName": "Kevin", "lastName": "Prince" },
+    { "id": 5, "username": "ttran", "firstName": "Tuan", "lastName": "Tran" },
+    { "id": 6, "username": "sjoshi", "firstName": "Sushil", "lastName": "Joshi" },
+    { "id": 7, "username": "phoellig", "firstName": "Peter", "lastName": "Hoellig" },
+    { "id": 8, "username": "adysart", "firstName": "Andy", "lastName": "Dysart" },
+    { "id": 9, "username": "wprice", "firstName": "Will", "lastName": "Price" }
+  ],
+
+  "phone": [
+    { "id": 1, "userId": 1, "type": "Home", "number": 1111111111 },
+    { "id": 2, "userId": 1, "type": "Mobile", "number": 1111111112 },
+    { "id": 3, "userId": 1, "type": "Office", "number": 1111111113 },
+    { "id": 4, "userId": 2, "type": "Mobile", "number": 2222222221 },
+    { "id": 5, "userId": 2, "type": "Office", "number": 2222222222 },
+    { "id": 6, "userId": 3, "type": "Home", "number": 3333333331 },
+    { "id": 7, "userId": 3, "type": "Mobile", "number": 3333333332 },
+    { "id": 8, "userId": 3, "type": "Office", "number": 3333333333 },
+    { "id": 9, "userId": 4, "type": "Home", "number": 4444444444 },
+    { "id": 10, "userId": 5, "type": "Mobile", "number": 5555555551 },
+    { "id": 11, "userId": 5, "type": "Office", "number": 5555555552 },
+    { "id": 12, "userId": 7, "type": "Home", "number": 7777777771 },
+    { "id": 13, "userId": 7, "type": "Office", "number": 7777777772 },
+    { "id": 14, "userId": 8, "type": "Office", "number": 8888888888 }
+  ]
+}
